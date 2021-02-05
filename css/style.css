@@ -433,6 +433,14 @@ body {
     font-size: 1.6em;
 }
 
+.trainer_stats_righ{
+    font-size: 16px;
+}
+
+.trainer_stats_left{
+    font-size: 16px;
+}
+
 .trainer_stats_percent {
     position: absolute;
     top: 46.66%;
