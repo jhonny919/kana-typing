@@ -1,0 +1,972 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+
+    border-style: solid;
+    border-color: #bbb;
+    border-width: 0px;
+}
+
+/* Variables
+
+background-color: #333;
+color: #bbb;
+
+font-family: "Noto Sans JP", sans-serif;
+
+*/
+
+body {
+    background-color: #333;
+    color: #bbb;
+
+    font-family: "Noto Sans JP", sans-serif;
+
+    user-select: none;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+/* START MENU */
+.start_menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 770px;
+    width: 880px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.start_menu_alphabets {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+
+    margin-bottom: 3px;
+}
+
+.start_menu_hiragana {
+    border-width: 3px;
+
+    position: relative;
+
+    width: 50%;
+    height: 100%;
+
+    margin-right: 3px;
+
+    user-select: none;
+    transition: 0.2s;
+}
+
+.start_menu_hiragana:hover {
+    background-color: #bbb;
+    color: #333;
+
+    cursor: pointer;
+}
+
+.start_menu_katakana {
+    border-width: 3px;
+
+    position: relative;
+
+    width: 50%;
+    height: 100%;
+
+    user-select: none;
+    transition: 0.2s;
+}
+
+.start_menu_katakana:hover {
+    background-color: #bbb;
+    color: #333;
+
+    cursor: pointer;
+}
+
+.start_menu_mixed {
+    border-width: 3px;
+
+    width: 100%;
+    height: 20%;
+
+    position: relative;
+}
+
+.start_menu_hiragana_text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.start_menu_katakana_text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.start_menu_hiragana_icon {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 250px;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.start_menu_katakana_icon {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 250px;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.start_menu_mixed_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 30px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+
+    user-select: none;
+}
+
+.MIXED {
+    font-size: 30px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    padding: 0 40px 0 40px;
+    transition: 0.2s;
+}
+
+.start_menu_mixed:hover {
+    background-color: #bbb;
+    color: #333;
+
+    cursor: pointer;
+}
+
+/* START MENU */
+
+/* TABLE*/
+
+.table {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 1530px; /*80px*/
+    height: 500px;
+}
+
+.table_row {
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+}
+
+.table_row_up {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+}
+
+.column_void {
+    width: 90px;
+    height: 50px;
+}
+
+.column_use {
+    border-width: 1px;
+
+    width: 90px;
+    height: 40px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+
+    transition: 0.2s;
+}
+
+.column_use:hover {
+    background-color: #bbb;
+    color: #333;
+
+    cursor: pointer;
+}
+
+.table_cell {
+    border-width: 1px;
+
+    width: 90px;
+    height: 90px;
+
+    position: relative;
+
+    user-select: none;
+
+    transition: 0.2s;
+}
+
+.active {
+    background-color: #bbb;
+    color: #333;
+
+    border-color: #333;
+}
+
+.table_cell:hover {
+    background-color: #bbb;
+    color: #333;
+
+    cursor: pointer;
+}
+
+.table_cell_jp {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%);
+
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.table_cell_eng {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+
+    font-size: 14px;
+}
+
+.table_void {
+    width: 90px;
+    height: 90px;
+}
+
+/* TABLE*/
+
+/* HiraKata MENU */
+
+.HiraKataMenu {
+    display: flex;
+    margin-top: 5px;
+
+    z-index: 10;
+}
+
+.HiraKataMenu_button {
+    margin: 0 25px;
+
+    border-width: 2px;
+
+    height: 55px;
+    width: 140px;
+
+    font-weight: 500;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.15s;
+    user-select: none;
+}
+
+.HiraKataMenu_button:hover {
+    background-color: #bbb;
+    color: #333;
+    cursor: pointer;
+}
+
+/* HiraKata MENU */
+
+/* HiraKata trainer */
+
+.hira_kata_trainer {
+    position: relative;
+    width: 1530px;
+    height: 300px;
+}
+
+.hira_kata_trainer_place {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 80.39%;
+    height: 73.33%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-right: 15px;
+}
+
+.hira_kata_trainer_cell {
+    width: 121px;
+    height: 121px;
+
+    position: relative;
+    user-select: none;
+
+    overflow: hidden;
+}
+
+.hira_kata_trainer_letter {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%);
+    font-size: 65px;
+    font-weight: 300;
+}
+
+.center_cell {
+    margin: 0 20px;
+}
+
+.center_letter {
+    font-size: 80px;
+}
+
+/* Stats */
+
+.hira_kata_trainer_stats {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 300px;
+    height: 300px;
+
+    border-width: 1px;
+
+    font-size: 10px;
+}
+
+.trainer_stats_title {
+    position: absolute;
+    top: 6.66%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+.trainer_stats_right_cell {
+    position: absolute;
+    top: 25%;
+    left: 24%;
+    transform: translate(-50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainer_stats_wrong_cell {
+    position: absolute;
+    top: 25%;
+    right: 24%;
+    transform: translate(50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainer_stats_right_title {
+    color: green;
+    font-size: 1.6em;
+}
+
+.trainer_stats_wrong_title {
+    color: darkred;
+    font-size: 1.6em;
+}
+
+.trainer_stats_percent {
+    position: absolute;
+    top: 46.66%;
+    left: 50%;
+    transform: translate(-50%);
+
+    font-size: 2em;
+}
+
+.trainer_stats_time {
+    position: absolute;
+    left: 25%;
+    top: 70%;
+    transform: translateX(-50%);
+
+    font-size: 1.6em;
+}
+
+.trainer_stats_perMinute {
+    position: absolute;
+    top: 70%;
+    right: 25%;
+    transform: translateX(50%);
+
+    font-size: 1.6em;
+}
+
+/* Stats */
+
+.hira_kata_trainer_arrow {
+    position: absolute;
+    left: 49.35%;
+    bottom: 10px;
+    transform: translate(-50%);
+
+    user-select: none;
+
+    font-size: 23px;
+}
+
+.hira_kata_trainer_input {
+    width: 80.39%;
+    height: 26.66%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.trainer_input {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+
+    width: 360px;
+    height: 40px;
+
+    font-size: 30px;
+
+    outline: none;
+    text-align: center;
+    background-color: #666;
+    color: #ccc;
+}
+
+/* HiraKata trainer */
+
+/* TABLE MIXED */
+
+.table_mixed {
+    display: flex;
+    flex-direction: column;
+
+    width: 1530px; /*102px*/
+    height: 590px;
+}
+
+.table_row_mixed {
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+}
+
+.table_row_up_mixed {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+}
+
+.column_void_mixed {
+    width: 102px;
+    height: 50px;
+}
+
+.column_use_mixed {
+    border-width: 1px;
+
+    width: 102px;
+    height: 40px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+
+    transition: 0.2s;
+}
+
+.column_use_mixed:hover {
+    background-color: #bbb;
+    color: #333;
+
+    cursor: pointer;
+}
+
+.table_cell_mixed {
+    border-width: 1px;
+
+    width: 102px;
+    height: 90px;
+
+    position: relative;
+
+    user-select: none;
+
+    transition: 0.2s;
+}
+
+.active_mixed {
+    background-color: #bbb;
+    color: #333;
+
+    border-color: #333;
+}
+
+.table_cell_mixed:hover {
+    background-color: #bbb;
+    color: #333;
+
+    cursor: pointer;
+}
+
+.table_cell_jp_mixed {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%);
+
+    font-size: 50px;
+    font-weight: 300;
+    white-space: nowrap;
+    letter-spacing: -5px;
+}
+
+.table_cell_eng_mixed {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+
+    font-size: 14px;
+}
+
+.table_void_mixed {
+    width: 102px;
+    height: 90px;
+}
+
+/* TABLE MIXED */
+
+/* MIXED MENU */
+
+.HiraKataMenu_mixed {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.HiraKataMenu_button_mixed {
+    margin: 25px 0;
+
+    border-width: 2px;
+
+    height: 55px;
+    width: 140px;
+
+    font-weight: 500;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.15s;
+    user-select: none;
+}
+
+.HiraKataMenu_button_mixed:hover {
+    background-color: #bbb;
+    color: #333;
+    cursor: pointer;
+}
+
+/* MIXED MENU */
+
+/* MIXED TRAINER */
+
+.hira_kata_trainer_cell_mixed {
+    width: 121px;
+    height: 121px;
+    margin: 0 17px;
+
+    position: relative;
+    user-select: none;
+}
+
+.hira_kata_trainer_letter_mixed {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%);
+    font-size: 40px;
+    font-weight: 300;
+
+    white-space: nowrap;
+}
+
+.center_cell_mixed {
+    margin: 0 30px;
+}
+
+.center_letter_mixed {
+    font-size: 70px;
+}
+
+/* MIXED TRAINER */
+
+/* MIXED */
+
+/* MEDIA :/ */
+
+@media only screen and (max-width: 1600px) {
+    .table {
+        width: 1360px; /*80px*/
+        height: 450px;
+    }
+    .table_row {
+        height: 80px;
+    }
+    .column_void {
+        width: 80px;
+        height: 50px;
+    }
+    .column_use {
+        width: 80px;
+        height: 40px;
+    }
+    .table_cell {
+        width: 80px;
+        height: 80px;
+    }
+    .table_cell_jp {
+        font-size: 44px;
+    }
+    .table_cell_eng {
+        font-size: 12.5px;
+    }
+    .table_void {
+        width: 80px;
+        height: 80px;
+    }
+    .HiraKataMenu {
+        top: 525px;
+    }
+    .hira_kata_trainer {
+        width: 1360px;
+    }
+    .hira_kata_trainer_place {
+        width: 77.94%;
+    }
+    .hira_kata_trainer_input {
+        width: 77.94%;
+    }
+    .hira_kata_trainer_cell {
+        width: 104px;
+        height: 104px;
+    }
+    .hira_kata_trainer_letter {
+        font-size: 56px;
+    }
+    .center_cell {
+        margin: 0 17.2px;
+    }
+    .center_letter {
+        font-size: 69px;
+    }
+    .trainer_input {
+        width: 310px;
+    }
+    .hira_kata_trainer_arrow {
+        left: 49.29%;
+    }
+
+    .table_mixed {
+        width: 1365px; /*91px*/
+        height: 530px; /*80px*/
+    }
+    .table_row_mixed {
+        height: 80px;
+    }
+    .column_void_mixed {
+        width: 91px;
+    }
+    .column_use_mixed {
+        width: 91px;
+    }
+    .table_cell_mixed {
+        width: 91px;
+        height: 80px;
+    }
+    .table_cell_jp_mixed {
+        font-size: 40px;
+        font-weight: 300;
+        white-space: nowrap;
+        letter-spacing: -4.45px;
+    }
+    .table_cell_eng_mixed {
+        font-size: 12.5px;
+    }
+    .table_void_mixed {
+        width: 91px;
+        height: 80px;
+    }
+    .hira_kata_trainer_cell_mixed {
+        width: 104px;
+        height: 104px;
+        margin: 0 14.6px;
+    }
+    .center_cell_mixed {
+        margin: 0 25px;
+    }
+    .hira_kata_trainer_letter_mixed {
+        font-size: 34.4px;
+    }
+    .center_letter_mixed {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    body {
+        font-weight: 300;
+    }
+    .table {
+        width: 1190px; /*70px*/
+        height: 400px;
+    }
+    .table_row_up {
+        height: 40px;
+    }
+    .column_use {
+        height: 32px;
+        font-size: 13px;
+    }
+    .table_row {
+        height: 70px;
+    }
+    .column_void {
+        width: 70px;
+    }
+    .column_use {
+        width: 70px;
+    }
+    .table_cell {
+        width: 70px;
+        height: 70px;
+    }
+    .table_cell_jp {
+        font-size: 39px;
+    }
+    .table_cell_eng {
+        font-size: 11px;
+    }
+    .table_void {
+        width: 70px;
+        height: 70px;
+    }
+    .HiraKataMenu_button {
+        height: 48px;
+        width: 125px;
+        font-size: 13px;
+    }
+    .hira_kata_trainer {
+        width: 1190px;
+        height: 250px;
+    }
+    .hira_kata_trainer_place {
+        width: 79%;
+    }
+    .hira_kata_trainer_stats {
+        width: 250px;
+        height: 250px;
+        font-size: 8.33px;
+    }
+    .hira_kata_trainer_arrow {
+        font-size: 19px;
+    }
+    .hira_kata_trainer_input {
+        width: 79%;
+    }
+    .hira_kata_trainer_cell {
+        width: 93px;
+        height: 93px;
+    }
+    .hira_kata_trainer_letter {
+        font-size: 50px;
+    }
+    .center_letter {
+        font-size: 62px;
+    }
+    .table_mixed {
+        width: 1200px;
+        height: 520px;
+    }
+    .table_row_up_mixed {
+        height: 40px;
+    }
+    .column_use_mixed {
+        height: 32px;
+    }
+    .table_cell_jp_mixed {
+        font-size: 33px;
+        letter-spacing: -3.3px;
+    }
+    .table_cell_eng_mixed {
+        font-size: 11px;
+    }
+    .HiraKataMenu_button_mixed {
+        height: 48px;
+        width: 125px;
+        font-size: 13px;
+    }
+    .hira_kata_trainer_cell_mixed {
+        height: 87px;
+        width: 87px;
+        margin: 0 11px;
+    }
+    .center_cell_mixed {
+        margin: 0 20px;
+    }
+    .hira_kata_trainer_letter_mixed {
+        font-size: 28.8px;
+    }
+    .center_letter_mixed {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-height: 850px) {
+    body {
+        padding: 5px;
+    }
+    .HiraKataMenu_button {
+        font-weight: 400;
+        height: 36px;
+        width: 94px;
+        font-size: 10px;
+    }
+    .hira_kata_trainer_stats {
+        width: 220px;
+        height: 220px;
+        font-size: 7.33px;
+    }
+    .hira_kata_trainer {
+        height: 220px;
+    }
+    .trainer_input {
+        height: 30px;
+        width: 250px;
+        font-style: 18px;
+    }
+
+    .table_mixed {
+        height: 460px;
+    }
+    .table_row_mixed {
+        height: 70px;
+    }
+    .table_cell_mixed {
+        height: 70px;
+    }
+    .hira_kata_trainer_stats {
+        width: 200px;
+        height: 200px;
+        font-size: 7.33px;
+    }
+    .hira_kata_trainer {
+        height: 200px;
+    }
+    .trainer_input {
+        height: 30px;
+        width: 250px;
+        font-style: 18px;
+    }
+    .start_menu {
+        height: 616px;
+        width: 704px;
+    }
+    .start_menu_hiragana_icon {
+        font-size: 200px;
+    }
+    .start_menu_katakana_icon {
+        font-size: 200px;
+    }
+    .start_menu_katakana_text {
+        font-size: 24px;
+    }
+    .start_menu_hiragana_text {
+        font-size: 24px;
+    }
+    .start_menu_mixed_text {
+        font-size: 22px;
+    }
+    .MIXED {
+        font-size: 24px;
+    }
+}
